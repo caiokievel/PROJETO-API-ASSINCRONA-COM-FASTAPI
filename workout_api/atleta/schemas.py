@@ -36,8 +36,14 @@ class AtletaOut(Atleta, OutMixin):
 class AtletaUpdate:
     nome: Annotated[
         Optional[str],
-        Field(None, description="Nome do atleta", example="Joao", max_length=50),
+        Field(
+            response_model=None,
+            description="Nome do atleta",
+            example="Joao",
+            max_length=50,
+        ),
     ]
     idade: Annotated[
-        Optional[int], Field(None, description="Idade do atleta", example=25)
+        Optional[int],
+        Field(response_model=None, description="Idade do atleta", example=25),
     ]
