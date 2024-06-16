@@ -39,7 +39,7 @@ async def post(
 
 @router.get(
     path="/",
-    summary="Consultar todas as categorias",
+    summary="Consultar todos centros de treinamentos",
     status_code=status.HTTP_200_OK,
     response_model=list[CentroTreinamentoOut],
 )
